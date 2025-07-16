@@ -11,6 +11,7 @@ class _MyRegistrationState extends State<MyRegistration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Registration')),
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [

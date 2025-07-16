@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'registration.dart'; // Make sure the path is correct
 
 class MyError extends StatefulWidget {
   const MyError({super.key});
@@ -28,7 +29,7 @@ class _MyErrorState extends State<MyError> {
 
             // Success message
             const Text(
-              'Page not found',
+              'Registration Failed. Try Again. ',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -38,6 +39,26 @@ class _MyErrorState extends State<MyError> {
             ),
 
             const SizedBox(height: 20),
+            // Back to home or another action
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyRegistration()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+              ),
+              child: const Text(
+                'Register',
+                style: TextStyle(fontSize: 16, color: Colors.white),
+              ),
+            ),
 
           ],
         ),
