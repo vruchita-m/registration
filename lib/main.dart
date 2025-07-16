@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'registration.dart';
 import 'success.dart';
+import 'error.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: 'success',
+    initialRoute: 'error',
     routes: {
       'registration' : (context) => MyRegistration(),
-      'success' : (context) => MySuccess()
+      'success' : (context) => MySuccess(),
+      'error' : (context) => MyError()
     },
   ));
 }
