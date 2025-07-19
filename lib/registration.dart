@@ -18,11 +18,17 @@ class _MyRegistrationState extends State<MyRegistration> {
           // Background image
           Container(
             decoration: const BoxDecoration(
+              color: Colors.white, // Background color
               image: DecorationImage(
-                image: AssetImage('assets/images/registration.jpg'),
+                image: AssetImage('assets/images/bg.png'), // Background image
                 fit: BoxFit.cover,
               ),
             ),
+          ),
+
+          // Semi-transparent overlay
+          Container(
+            color: Colors.black.withOpacity(0.5),
           ),
 
           // Centered Form Content with Shadow
